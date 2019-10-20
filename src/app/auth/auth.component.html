@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="wrapper">
+  <form [formGroup]="authForm" (ngSubmit)="signIn()">
+    <div class="margin-input">
+      <input type="email" formControlName="email" placeholder="Email">
+      <p class="invalid-data"
+         *ngIf="authForm.controls['email'].invalid && (authForm.controls['email'].touched || authForm.controls['email'].dirty)">
+        Email is invalid
+      </p>
+    </div>
+    <div class="margin-input">
+      <input type="password" formControlName="password" placeholder="Password">
+      <p class="invalid-data"
+         *ngIf="authForm.controls['password'].invalid && (authForm.controls['password'].touched || authForm.controls['password'].dirty)">
+        Must be more than 6 letters
+      </p>
+    </div>
+    <button type="button" (click)="signIn()" class="margin-input" [disabled]="!authForm.valid">Sign In</button>
+    <button type="button" (click)="signUp()" [disabled]="!authForm.valid">Sign Up</button>
+  </form>
+</div>

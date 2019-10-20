@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="header-logo">
+    <h3>Giphy</h3>
+  </div>
+  <div class="header-nav">
+    <ul>
+      <li routerLink="/main">Home</li>
+      <li *ngIf="login" routerLink="/main/collection">Collection</li>
+      <li *ngIf="!login" routerLink="/auth">Log In</li>
+      <li *ngIf="login" (click)="logOut()">Log Out</li>
+    </ul>
+  </div>
+</div>

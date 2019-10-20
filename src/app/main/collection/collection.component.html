@@ -1,0 +1,9 @@
+<form class="upload" [formGroup]="upload" (ngSubmit)="uploadFile(file)">
+  <h2>Upload gif</h2>
+  <input type="file" accept="image/gif" #file (change)="getFile($event.target)">
+  <div class="tag">
+    <input formControlName="tag" type="text" placeholder="Tag">
+  </div>
+  <button type="submit">Add gif</button>
+</form>
+<app-gifs-list [gif]="myCollection" (deleted)="deleteGif($event)"></app-gifs-list>

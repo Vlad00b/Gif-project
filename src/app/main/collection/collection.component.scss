@@ -1,0 +1,44 @@
+.upload {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  @media screen and (max-width: 1200px){
+    width: 50%;
+  }
+  @media screen and (max-width: 770px){
+    width: 65%;
+  }
+  @media screen and (max-width: 500px){
+    width: 80%;
+  }
+  h2 {
+    margin: 20px 0;
+    font-size: 30px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  .tag {
+    input {
+      width: 50%;
+      height: 28px;
+      font-size: 18px;
+      outline: none;
+      border: 1px #000 solid;
+      border-radius: 10px;
+      padding: 0 7px;
+      @media screen and (max-width: 665px){
+        width: 60%;
+      }
+    }
+  }
+  button{
+    width: 50%;
+    height: 28px;
+    font-size: 18px;
+    outline: none;
+    border: 1px #000 solid;
+    border-radius: 10px;
+    padding: 0 7px;
+  }
+}

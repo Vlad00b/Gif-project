@@ -1,0 +1,11 @@
+<div class="search">
+  <input type="search" id="search" placeholder="Search gifs">
+</div>
+<app-gifs-list [gif]="gifList" (deleted)="deletedGif($event)"></app-gifs-list>
+<div
+  class="search-results"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()"
+></div>
