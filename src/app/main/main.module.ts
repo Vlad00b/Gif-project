@@ -12,6 +12,8 @@ import {CollectionComponent} from './collection/collection.component';
 import {CollectionService} from './shared/services/collection.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import {NgxSmartModalModule, NgxSmartModalService} from 'ngx-smart-modal';
+import {CollectionGuard} from './shared/services/collection.guard';
+import {AuthService} from '../auth/shared/auth.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import {NgxSmartModalModule, NgxSmartModalService} from 'ngx-smart-modal';
     ReactiveFormsModule,
     NgxSmartModalModule
   ],
-  providers: [GifService, CollectionService, NgxSmartModalService],
+  providers: [GifService, CollectionService, NgxSmartModalService, CollectionGuard],
   exports: [InfiniteScrollModule, NgxSmartModalModule]
 })
 export class MainModule {

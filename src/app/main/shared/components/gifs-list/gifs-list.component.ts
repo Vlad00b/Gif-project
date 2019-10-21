@@ -24,7 +24,6 @@ export class GifsListComponent implements OnInit, OnChanges {
       .subscribe(res => {
         this.login = res;
       });
-    // this.getMyCollection();
   }
 
   ngOnChanges(change: SimpleChanges) {
@@ -50,7 +49,8 @@ export class GifsListComponent implements OnInit, OnChanges {
       this.deleted.emit(item.id);
     }
   }
-  openModal(modal, gif) {
+
+  openModal(modal: any, gif: string) {
     this.selectedGif = gif;
     modal.open();
   }

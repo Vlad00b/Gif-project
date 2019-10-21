@@ -1,6 +1,6 @@
 <div class="gif">
-  <div *ngFor="let item of gifs" class="gif-item" (click)="openModal(modal, item.images.original.url)">
-    <img [src]="item.images.preview_gif.url || item.images.original.url">
+  <div *ngFor="let item of gifs" class="gif-item">
+    <img [src]="item.images.preview_gif.url || item.images.original.url" (click)="openModal(modal, item.images.original.url)">
     <i class="fa-heart" [ngClass]="item.like ? 'fas' : 'far'" *ngIf="login" (click)="addToCollection(item)"></i>
   </div>
 </div>
